@@ -1,0 +1,4 @@
+- npm i -g nodemon
+- update scripts ("start": "nodemon src/app.js")
+- npm i validator (using for email validation)
+- npm i bcrypt (using for password encyption)
