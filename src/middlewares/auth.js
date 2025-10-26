@@ -5,7 +5,7 @@ const User = require("../models/user");
 const userAuth = async (req, res, next) => {
     try{ 
         // read the token from the req cookies
-        const {token} = req.cookies;
+        const token =  req.headers.authorization.split(" ")[1] || req.cookies?.token;
         if(!token){
             return res.status(401).send("Please Login!");
         }
